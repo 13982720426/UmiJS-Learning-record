@@ -1,7 +1,7 @@
 import styles from './index.less';
-import {DatePicker,Button} from 'antd'
+import {DatePicker} from 'antd'
 import {useEffect} from 'react'
-import {history,request} from 'umi'
+import {history} from 'umi'
 
 export default function IndexPage() {
 
@@ -11,17 +11,9 @@ export default function IndexPage() {
         // },2000)
     }, [])
 
-    const getData= async ()=>{
-        // request('/api/index').then(res=>{
-        //     console.log(res)
-        // })
-        const data = await request('/api/tags')
-    }
-
   return (
     <div>
       <h1 className={styles.title}>Page index</h1>
-      <Button onClick={getData}>获取数据</Button>
       <DatePicker />
     </div>
   );

@@ -27,24 +27,23 @@ theme: {
   },
   routes: [
     { 
-        // path: '/', component: '@/layouts/index',
+        path: '/', component: '@/layouts/index',
         routes:[
             {path:'/',component:'@/pages/index'},
             { 
                 path: '/list', 
+                wrappers: [
+                    '@/wrappers/auth',
+                ],
                 routes:[
                     {path:'/list/1',component: '@/pages/list1',title:'页面1'},
                     {path:'/list/2',component: '@/pages/list2',title:'页面2'},
+                    {component:'@/pages/404'}
                 ]
             },
-            {
-                path:'/dva',
-                component:'@/pages/dva'
-            }
         ]
     },
     {component:'@/pages/404'}
   ],
   fastRefresh: {},
-  mock:false,
 });

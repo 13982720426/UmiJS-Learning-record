@@ -26,25 +26,21 @@ theme: {
     '@primary-color': '#1DA57A',
   },
   routes: [
+    { path: '/', component: '@/pages/index' },
+    { path: '/user', redirect: '/list/1' },
+
     { 
-        // path: '/', component: '@/layouts/index',
+        path: '/list', 
+        component:'@/layouts/index',
+        wrappers: [
+            '@/wrappers/auth',
+        ],
         routes:[
-            {path:'/',component:'@/pages/index'},
-            { 
-                path: '/list', 
-                routes:[
-                    {path:'/list/1',component: '@/pages/list1',title:'页面1'},
-                    {path:'/list/2',component: '@/pages/list2',title:'页面2'},
-                ]
-            },
-            {
-                path:'/dva',
-                component:'@/pages/dva'
-            }
+            {path:'/list/1',component: '@/pages/list'},
+            {path:'/list/2',component: '@/pages/index'}
         ]
     },
-    {component:'@/pages/404'}
   ],
   fastRefresh: {},
-  mock:false,
+  
 });

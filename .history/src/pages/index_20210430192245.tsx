@@ -16,6 +16,7 @@ export default function IndexPage() {
         //     console.log(res)
         // })
         const data = await request('/api/tags')
+        console.log(data)
     }
 
   return (

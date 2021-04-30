@@ -15,7 +15,8 @@ export default function IndexPage() {
         // request('/api/index').then(res=>{
         //     console.log(res)
         // })
-        const data = await request('/api/tags')
+        const data = await request('/api/person')
+        console.log(data)
     }
 
   return (

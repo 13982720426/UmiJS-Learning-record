@@ -46,5 +46,5 @@ theme: {
     {component:'@/pages/404'}
   ],
   fastRefresh: {},
-  mock:false,
+//   mock:false,
 });

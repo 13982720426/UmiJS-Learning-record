@@ -27,7 +27,7 @@ theme: {
   },
   routes: [
     { 
-        // path: '/', component: '@/layouts/index',
+        path: '/', component: '@/layouts/index',
         routes:[
             {path:'/',component:'@/pages/index'},
             { 
@@ -37,14 +37,10 @@ theme: {
                     {path:'/list/2',component: '@/pages/list2',title:'页面2'},
                 ]
             },
-            {
-                path:'/dva',
-                component:'@/pages/dva'
-            }
         ]
     },
     {component:'@/pages/404'}
   ],
   fastRefresh: {},
-  mock:false,
+//   mock:false,
 });

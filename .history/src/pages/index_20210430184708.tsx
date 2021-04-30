@@ -11,11 +11,8 @@ export default function IndexPage() {
         // },2000)
     }, [])
 
-    const getData= async ()=>{
-        // request('/api/index').then(res=>{
-        //     console.log(res)
-        // })
-        const data = await request('/api/tags')
+    const getData=()=>{
+        request('/api/index')
     }
 
   return (
