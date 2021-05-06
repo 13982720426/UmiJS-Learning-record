@@ -10,8 +10,7 @@ import {Button} from 'antd'
 const Dva = (props) => {
 
     const {dispatch}=props
-    console.log(props.tags)
-    // console.log(dispatch)
+    const list=props.tags.tagsList.list||[]
 
     //使用model，获取数据
     const getData=()=>{
@@ -24,6 +23,11 @@ const Dva = (props) => {
         <div>
             <h3>Dva的使用</h3>
             <Button onClick={getData}>获取列表数据</Button>
+            {
+                list.map((item:T,index:number)=>{
+                    return <p key={index}>{item.name}</p>
+                })
+            }
         </div>
     );
 };
