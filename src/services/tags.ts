@@ -1,4 +1,4 @@
-import {request} from 'umi'
+import request from '../utils/request'
 
 //获取标签数据
 export const getTags=()=>{
