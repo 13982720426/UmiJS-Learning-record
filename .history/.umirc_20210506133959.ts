@@ -40,10 +40,6 @@ theme: {
             {
                 path:'/dva',
                 component:'@/pages/dva'
-            },
-            {
-                path:'/login',
-                component:'@/pages/login'
             }
         ]
     },

@@ -10,8 +10,6 @@ import {Button} from 'antd'
 const Dva = (props) => {
 
     const {dispatch}=props
-    console.log(props.tags)
-    // console.log(dispatch)
 
     //使用model，获取数据
     const getData=()=>{

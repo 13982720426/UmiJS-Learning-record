@@ -23,7 +23,7 @@ export default{
             //调用reducer,并传递数据
             yield put({
                 type:'setTagsList',//类似于react中的action的type
-                payload:response
+                paylod:response
             })
 
         }

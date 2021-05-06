@@ -23,14 +23,14 @@ export default{
             //调用reducer,并传递数据
             yield put({
                 type:'setTagsList',//类似于react中的action的type
-                payload:response
+                paylod:response
             })
 
         }
     },
-    //更新statem
-    reducers:{
-        setTagsList(state,action){
+    //更新state
+    reducer:{
+        setTagsListz(state,action){
             return {...state,tagsList:action.payload}
         }
     },
