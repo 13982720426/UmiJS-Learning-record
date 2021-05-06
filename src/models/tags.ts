@@ -1,10 +1,4 @@
-import {request} from 'umi'
-
-//获取标签数据
-const getTags=()=>{
-    return request('/api/tags')
-}
-
+import {getTags} from "@/services/tags"
 
 
 export default{
